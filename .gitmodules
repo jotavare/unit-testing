@@ -1,0 +1,3 @@
+[submodule "aout3-samples"]
+	path = aout3-samples
+	url = https://github.com/royosherove/aout3-samples
