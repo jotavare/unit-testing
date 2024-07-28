@@ -1,6 +1,100 @@
 ## ABOUT
 
-## BOOK REFERENCES
+This project focuses on the creation and testing of a specific function, `hasPair()`, using modern `C++` practices. I had to learn how `cmake` works (I only knew how to do `Makefiles`) and also how to use `googletest` for unit testing. The project was created using an adapted devcontainer for C++ and node.js for "The Art of Unit Testing" book chapter exercises in the folder `aout3-samples`.
+
+----
+
+## PROJECT CHECKLIST
+
+- [X] [Introduction to unit testing](https://livebook.manning.com/book/the-art-of-unit-testing-third-edition)
+- [X] Implement the function `hasPair()`.
+- [X] Use Google Test for unit testing the code.
+- [X] Remember to comment on the code where necessary.
+- [X] Publish the code on GitHub and send me the link.
+- [X] Bonus: Set up the project with CMake.
+
+----
+
+## FOLDER STRUCTURE
+
+The current folder structure of the project and explanation of each folder and file:
+
+```bash
+├── .devcontainer/
+│   ├── cpp/
+│   │   ├── devcontainer.json   # devcontainer configuration file
+│   │   ├── Dockerfile          # Dockerfile for setting up devcontainer
+│   │   ├── post-create.sh      # script to run after creating the devcontainer
+│   │   └── reinstall-cmake.sh  # script to reinstall cmake
+│   ├── node/
+│   │   └── devcontainer.json   # devcontainer configuration file for aout3-samples
+├── aout3-samples/              # sample exercises from "The Art of Unit Testing" book
+├── cmake-tutorial/             # small tutorial I did to learn cmake
+├── exercise/
+│   ├── cmake/                  # includes a cmake update submodules file
+│   ├── example/                # cmake example I did to learn cmake and a makefile example
+│   ├── googletest/             # source code of googletest
+│   ├── hasPair/                # the main exercise, hasPair function and tests
+│   └── CMakeLists.txt          # main cmake configuration file
+├── .gitignore
+├── .gitmodules
+├── LICENSE
+└── README.md
+```
+
+----
+
+## COMMANDS
+
+List of commands that I learned doing this project:
+
+```bash
+# generate build system files in the 'build' directory
+# uses --trace to show the commands being executed
+cmake -S . -B build
+cmake -S . -B build --trace
+
+# build the project using the generated build system files
+# uses [n] (threads) to build or $(nproc --all) to use all threads
+# uses --verbose to show the commands being executed
+cmake --build build -j [n]
+cmake --build build -j [n] --verbose
+cmake --build build -j $(nproc --all)
+
+# run the tests with coloured output and show output on failure
+GTEST_COLOR=1 ctest --test-dir build --output-on-failure
+
+# measure the time
+time ccmake -S . -B build
+
+# measure the time
+time cmake --build build
+
+# display the directory structure up to [n] levels deep
+tree -L [n]
+
+# list all installed VS Code extensions
+code --list-extensions | xargs -L 1 echo code --install-extension
+```
+
+----
+
+## FUTURE IDEAS
+
+These are some ideas or improvements that I would make in the future:
+
+- [ ] Create a flow diagram of the project and the unit tests.
+- [ ] Create a CI/CD pipeline to automate the build and testing process, when code is pushed to the repository.
+- [ ] Create a random value vector to test the function with a custom range of values, sizes and number of times.
+- [ ] Create a variable on `CMakeLists.txt` to change the value of the function. `cmake -S . -B build -D vector="1,2,3,4,5"`
+- [ ] Instead of symlink the latest version of Google Test, use a release version or fetch the latest version with `cmake`.
+- [ ] Currently, I have to build again with `cmake --build build` so the tests can be disabled/enabled. Find if this is the intended behaviour.
+
+----
+
+## REFERENCES
+
+Some references that I used or will, to learn and complete this project, based on the book "The Art of Unit Testing" and other sources:
 
 | Book | Author |
 | :--- | :----- |
@@ -12,26 +106,28 @@
 | Growing Object-Oriented Software, Guided by Tests (Addison-Wesley Professional, 2009) | `Steve Freeman` and `Nat Pryce` |
 | Clean Code (Pearson, 2008) | `Robert C. Martin` |
 
-## WEBSITE REFERENCES
-
-| Link | Source |
+| Websites | Source |
 | :--- | :----- |
 | [Command Query Separation](https://martinfowler.com/bliki/CommandQuerySeparation.html) | `Website` |
 | [XUnit Test Patterns](https://xunitpatterns.com) | `Website` |
 | [Node.js’s assert module](https://nodejs.org/api/assert.html) | `Website` |
-https://google.github.io/googletest/primer.html
-https://google.github.io/googletest/reference/assertions.html
-https://github.com/microsoft/vscode-remote-try-cpp
+| [GoogleTest Primer](https://google.github.io/googletest/primer.html) | `Website` |
+| [GoogleTest Assertions Reference](https://google.github.io/googletest/reference/assertions.html) | `Website` |
+| [CPP Devcontainer](https://github.com/microsoft/vscode-remote-try-cpp) | `GitHub` |
+| [GNU Smalltalk User's Guide: SUnit - Kent Beck](https://www.gnu.org/software/smalltalk/manual/html_node/SUnit.html) | `Website` |
 
+| Videos |
+| :--- |
+| [CMake - the essential package](https://www.youtube.com/watch?v=UH6F6ypdYbw) |
+| [Do you even test? (your code with CMake)](https://youtu.be/pxJoVRfpRPE?si=-A3eVD9pUFIryHTY) |
 
-## VIDEO REFERENCES
+----
 
-https://youtu.be/pxJoVRfpRPE?si=-A3eVD9pUFIryHTY
-https://www.youtube.com/watch?v=UH6F6ypdYbw
+## UNIT TEST CHECKLIST
 
-## UNIT TEST CHECKLIST (organize)
+### UNIT TEST PROPERTIES
 
-A good unit test should also exhibit the following properties:
+A good unit test should exhibit the following properties:
 
 - [ ] It should be easy to understand the intent of the test author.
 - [ ] It should be easy to read and write.
@@ -40,17 +136,12 @@ A good unit test should also exhibit the following properties:
 - [ ] It should be useful and provide actionable results.
 - [ ] Anyone should be able to run it with the push of a button.
 - [ ] When it fails, it should be easy to detect what was expected and determine how to pinpoint the problem.
-- [ ] It should run quickly.
-- [ ] It should have full control of the code under test (more on that in chapter 3).
-- [ ] It should be fully isolated (run independently of other tests).
-- [ ] It should run in memory without requiring system files, networks, or databases.
-- [ ] It should be as synchronous and linear as possible when that makes sense (no parallel threads if we can help it).
 
-A unit test checklist
+### UNIT TEST QUESTIONS
 
-Many people confuse the act of testing their software with the concept of a unit test. To start off, ask yourself the following questions about the tests you’ve written and executed up to now:
+Ask yourself the following questions about the tests you’ve written and executed up to now:
 
-- [ ] Can I run and get results from a test I wrote two weeks or months or years ago?
+- [ ] Can I run and get results from a test I wrote two weeks, months or years ago?
 - [ ] Can any member of my team run and get results from tests I wrote two months ago?
 - [ ] Can I run all the tests I’ve written in no more than a few minutes?
 - [ ] Can I run all the tests I’ve written at the push of a button?
@@ -60,63 +151,12 @@ Many people confuse the act of testing their software with the concept of a unit
 - [ ] Do my tests stop working if there’s no database, network, or deployment?
 - [ ] If I delete, move, or change one test, do other tests remain unaffected?
 
-We can recognize three main criteria in the previous questions and answers:
-
-    Readability—If we can’t read it, then it’s hard to maintain, hard to debug, and hard to know what’s wrong.
-    Maintainability—If maintaining the test or production code is painful because of the tests, our lives will become a living nightmare.
-    Trust—If we don’t trust the results of our tests when they fail, we’ll start manually testing again, losing all the time benefit the tests are supposed to provide. If we don’t trust the tests when they pass, we’ll start debugging more, again losing any time benefit.
-
-A unit test is an automated piece of code that invokes the unit of work through an entry point and then checks one of its exit points. A unit test is almost always written using a unit testing framework. It can be written easily and runs quickly. It’s trustworthy, readable, and maintainable. It is consistent as long as the production code we control has not changed.
+### UNIT TEST QUALITIES
 
 A good unit test has these qualities:
 
-    It should run quickly.
-    It should have full control of the code under test.
-    It should be fully isolated (it should run independently of other tests).
-    It should run in memory without requiring filesystem files, networks, or databases.
-    It should be as synchronous and linear as possible (no parallel threads).
-
-Entry points are public functions that are the doorways into our units of work and trigger the underlying logic. Exit points are the places you can inspect with your test. They represent the effects of the units of work.
-An exit point can be a return value, a change of state, or a call to a third-party dependency. Each exit point usually requires a separate test, and each type of exit point requires a different testing technique.
-A unit of work is the sum of actions that take place between the invocation of an entry point up until a noticeable end result through one or more exit points. A unit of work can span a function, a module, or multiple modules.
-Integration testing is just unit testing with some or all of the dependencies being real and residing outside of the current execution process. Conversely, unit testing is like integration testing, but with all of the dependencies in memory (both real and fake), and we have control over their behavior in the test.
-The most important attributes of any test are readability, maintainability, and trust. Readability tells us how easy it is to read and understand the test. Maintainability is the measure of how painful it is to maintain the test code. Without trust, it’s harder to introduce important changes (such as refactoring) in a codebase, which leads to code deterioration.
-Test-driven development (TDD) is a technique that advocates for writing tests before the production code. This approach is also referred to as a test-first approach (as opposed to code-first).
-The main benefit of TDD is verifying the correctness of your tests. Seeing your tests fail before writing production code ensures that these same tests would fail if the functionality they cover stops working properly.
-
-## TO ORGANIZE
-
-UNIT TEST
-Kent Beck introduced the concept of unit testing in Smalltalk, unit testing
-SUT
-ENTRY POINT
-EXIT POINT
-WAIT TIME IN MAKEFILE PARELLEL
-DRAW A DIAGRAM
-CI/CD PIPELINE
-TEST WITH FRAMEWORKS AND WITHOUT
-FAILURE POINTS
-TDD UNIT TEST
-
-Unit testing frameworks such as Jest can provide even more generic helper methods like this
-
-A regression is broken functionality—code that used to work. You can also think of it as one or more units of work that once worked and now don’t.
-Good tests can be accessed and run by anyone.
-
-e possivel adicionar google test como fetch no cmake
-
-## COMMANDS
-
-code --list-extensions | xargs -L 1 echo code --install-extension
-# cmake -S . # compile source folders
-# -B build # output to build folder
-# tree -L 3 # show folder structure
-# cmake --build build -j 12 # compile with 12 threads
-cmake -S . -B build -D FOO="cmd_value"
-
-time cmake -S . -B build
-time cmake --build build
-
-comprei arduino
-universidade
-create a pipline
+- [ ] It should run quickly.
+- [ ] It should have full control of the code under test.
+- [ ] It should be fully isolated (it should run independently of other tests).
+- [ ] It should run in memory without requiring filesystem files, networks, or databases.
+- [ ] It should be as synchronous and linear as possible (no parallel threads).
