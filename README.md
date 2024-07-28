@@ -114,6 +114,8 @@ code --list-extensions | xargs -L 1 echo code --install-extension
 # cmake --build build -j 12 # compile with 12 threads
 cmake -S . -B build -D FOO="cmd_value"
 
+time cmake -S . -B build
+time cmake --build build
 
 comprei arduino
 universidade
