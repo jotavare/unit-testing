@@ -2,8 +2,8 @@
 cmake_minimum_required(VERSION 3.16..3.24)
 
 # project name, version, description, and programming language
-project(our_project VERSION 0.0.1
-                    DESCRIPTION "Our first project"
+project(sample VERSION 0.0.1
+                    DESCRIPTION "Sample Project"
                     LANGUAGES CXX)
 
 # set to release if not set in the command line
