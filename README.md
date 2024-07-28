@@ -21,6 +21,13 @@
 | [Node.js’s assert module](https://nodejs.org/api/assert.html) | `Website` |
 https://google.github.io/googletest/primer.html
 https://google.github.io/googletest/reference/assertions.html
+https://github.com/microsoft/vscode-remote-try-cpp
+
+
+## VIDEO REFERENCES
+
+https://youtu.be/pxJoVRfpRPE?si=-A3eVD9pUFIryHTY
+https://www.youtube.com/watch?v=UH6F6ypdYbw
 
 ## UNIT TEST CHECKLIST (organize)
 
@@ -95,3 +102,14 @@ Unit testing frameworks such as Jest can provide even more generic helper method
 
 A regression is broken functionality—code that used to work. You can also think of it as one or more units of work that once worked and now don’t.
 Good tests can be accessed and run by anyone.
+
+e possivel adicionar google test como fetch no cmake
+
+## COMMANDS
+
+code --list-extensions | xargs -L 1 echo code --install-extension
+# cmake -S . # compile source folders
+# -B build # output to build folder
+# tree -L 3 # show folder structure
+# cmake --build build -j 12 # compile with 12 threads
+cmake -S . -B build -D FOO="cmd_value"
