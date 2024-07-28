@@ -125,6 +125,8 @@ Some references that I used or will, to learn and complete this project, based o
 
 ## UNIT TEST CHECKLIST
 
+This section includes some checklists and questions from the book "The Art of Unit Testing" that I found useful to keep in mind when writing unit tests.
+
 ### UNIT TEST PROPERTIES
 
 A good unit test should exhibit the following properties:
