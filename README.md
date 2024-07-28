@@ -113,3 +113,8 @@ code --list-extensions | xargs -L 1 echo code --install-extension
 # tree -L 3 # show folder structure
 # cmake --build build -j 12 # compile with 12 threads
 cmake -S . -B build -D FOO="cmd_value"
+
+
+comprei arduino
+universidade
+create a pipline
