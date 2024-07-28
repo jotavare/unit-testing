@@ -1,0 +1,22 @@
+{
+	"name": "C++",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"ms-vscode.cmake-tools",
+				"ms-vscode.cpptools",
+				"ms-vscode.cpptools-extension-pack",
+				"ms-vscode.cpptools-themes",
+				"ms-vscode.makefile-tools",
+				"vscode-icons-team.vscode-icons"
+			]
+		}
+	},
+	"postCreateCommand": ".devcontainer/cpp/post-create.sh",
+	"remoteUser": "root"
+}
