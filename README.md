@@ -113,6 +113,7 @@ Some references that I used or will in the future, to learn and complete this pr
 | :--- |
 | [CMake - the essential package](https://www.youtube.com/watch?v=UH6F6ypdYbw) |
 | [Do you even test? (your code with CMake)](https://youtu.be/pxJoVRfpRPE?si=-A3eVD9pUFIryHTY) |
+| [GoogleTest Introduction with CMake LINUX - C++ - GMOCK](https://youtu.be/zfgFphZ63UY?si=lWw49Dj72T1CLZIF) |
 
 ## UNIT TEST CHECKLIST
 
