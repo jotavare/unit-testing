@@ -1,6 +1,6 @@
 ## ABOUT
 
-This project involves creating and testing a function called `hasPair()` using modern `C++` practices. It required learning `CMake`, and using `GoogleTest` for unit testing. The project setup utilizes a devcontainer for `C++`, and `Node.js` for chapter exercises from `The Art of Unit Testing` (`aout3-samples/)`.
+This project involves creating and testing a function called `hasPair()` using modern `C++` practices. It required learning `CMake`, and using `GoogleTest` for unit testing. The project setup utilizes a devcontainer for `C++`, and `Node.js` for chapter exercises from `The Art of Unit Testing` (`aout3-samples/`).
 
 ## PROJECT CHECKLIST
 
