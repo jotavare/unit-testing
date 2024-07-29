@@ -1,7 +1,7 @@
 # minimum versionx required
 cmake_minimum_required(VERSION 3.16..3.24)
 
-# project name, version, description, and language 
+# project name, version, description, and language
 project(try_googletest
     VERSION 0.0.1
     DESCRIPTION "Google Test"
@@ -64,4 +64,3 @@ message(STATUS "Value of FOO: ${FOO}")
 # target_compile_features
 # target_link_libraries
 # (generally any command that starts with target_)
-
