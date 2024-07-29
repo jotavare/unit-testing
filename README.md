@@ -1,21 +1,17 @@
 ## ABOUT
 
-This project focuses on the creation and testing of a specific function, `hasPair()`, using modern `C++` practices. I had to learn how `cmake` works (I only knew how to do `Makefiles`) and also how to use `googletest` for unit testing. The project was created using an adapted devcontainer for C++ and node.js for "The Art of Unit Testing" book chapter exercises in the folder `aout3-samples`.
-
-----
+This project involves creating and testing a function called `hasPair()` using modern `C++` practices. It required learning `CMake`, and using `GoogleTest` for unit testing. The project setup utilizes a devcontainer for `C++`, and `Node` for chapter exercises from `The Art of Unit Testing` in the `aout3-samples/` folder.
 
 ## PROJECT CHECKLIST
 
-- [X] [Introduction to unit testing](https://livebook.manning.com/book/the-art-of-unit-testing-third-edition)
+- [X] [Introduction to unit testing.](https://livebook.manning.com/book/the-art-of-unit-testing-third-edition)
 - [X] Implement the function `hasPair()`.
-- [X] Use Google Test for unit testing the code.
-- [X] Remember to comment on the code where necessary.
-- [X] Publish the code on GitHub and send me the link.
-- [X] Bonus: Set up the project with CMake.
+- [X] Use Google Test, for unit testing the code.
+- [X] Remember to comment the code where necessary.
+- [X] Publish the code on GitHub and send the link.
+- [X] **Bonus**: Set up the project with `CMake`.
 
-----
-
-## FOLDER STRUCTURE
+## PROJECT STRUCTURE
 
 The current folder structure of the project and explanation of each folder and file:
 
@@ -46,7 +42,7 @@ The current folder structure of the project and explanation of each folder and f
 
 ## COMMANDS
 
-List of commands that I learned doing this project:
+List of commands that I learned while doing this project:
 
 ```bash
 # generate build system files in the 'build' directory
@@ -86,7 +82,10 @@ These are some ideas or improvements that I would make in the future:
 - [ ] Create a flow diagram of the project and the unit tests.
 - [ ] Create a CI/CD pipeline to automate the build and testing process, when code is pushed to the repository.
 - [ ] Create a random value vector to test the function with a custom range of values, sizes and number of times.
-- [ ] Create a variable on `CMakeLists.txt` to change the value of the function. `cmake -S . -B build -D vector="1,2,3,4,5"`
+- [ ] Create a variable on `CMakeLists.txt` to change the value of the function.
+    ```bash
+    cmake -S . -B build -D vector="1,2,3,4,5"
+    ```
 - [ ] Instead of symlink the latest version of Google Test, use a release version or fetch the latest version with `cmake`.
 - [ ] Currently, I have to build again with `cmake --build build` so the tests can be disabled/enabled. Find if this is the intended behaviour.
 
@@ -94,7 +93,7 @@ These are some ideas or improvements that I would make in the future:
 
 ## REFERENCES
 
-Some references that I used or will, to learn and complete this project, based on the book "The Art of Unit Testing" and other sources:
+Some references that I used or will in the future, to learn and complete this project. Some of them are based on the book `The Art of Unit Testing`.
 
 | Book | Author |
 | :--- | :----- |
@@ -125,7 +124,7 @@ Some references that I used or will, to learn and complete this project, based o
 
 ## UNIT TEST CHECKLIST
 
-This section includes some checklists and questions from the book "The Art of Unit Testing" that I found useful to keep in mind when writing unit tests.
+This section includes some checklists and questions from the book `The Art of Unit Testing`, that I found useful to keep in mind when writing unit tests.
 
 ### UNIT TEST PROPERTIES
 
