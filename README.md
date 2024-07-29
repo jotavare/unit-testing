@@ -25,10 +25,10 @@ The current folder structure of the project and explanation of each folder and f
 │   ├── node/
 │   │   └── devcontainer.json   # devcontainer configuration file for aout3-samples
 ├── aout3-samples/              # sample exercises from "The Art of Unit Testing" book
-├── cmake-tutorial/             # small tutorial I did to learn cmake
+├── cmake-tutorial/             # small tutorial i did to learn cmake
 ├── exercise/
 │   ├── cmake/                  # includes a cmake update submodules file
-│   ├── example/                # cmake example I did to learn cmake and a makefile example
+│   ├── example/                # cmake example i did to learn cmake and a makefile example
 │   ├── googletest/             # source code of googletest
 │   ├── hasPair/                # the main exercise, hasPair function and tests
 │   └── CMakeLists.txt          # main cmake configuration file
@@ -38,21 +38,19 @@ The current folder structure of the project and explanation of each folder and f
 └── README.md
 ```
 
-----
-
 ## COMMANDS
 
 List of commands that I learned while doing this project:
 
 ```bash
 # generate build system files in the 'build' directory
-# uses --trace to show the commands being executed
+# use --trace to show the commands being executed
 cmake -S . -B build
 cmake -S . -B build --trace
 
 # build the project using the generated build system files
-# uses [n] (threads) to build or $(nproc --all) to use all threads
-# uses --verbose to show the commands being executed
+# use [n] (threads) to build or $(nproc --all) to use all threads
+# use --verbose to show the commands being executed
 cmake --build build -j [n]
 cmake --build build -j [n] --verbose
 cmake --build build -j $(nproc --all)
@@ -69,11 +67,9 @@ time cmake --build build
 # display the directory structure up to [n] levels deep
 tree -L [n]
 
-# list all installed VS Code extensions
+# list all installed vs Code extensions
 code --list-extensions | xargs -L 1 echo code --install-extension
 ```
-
-----
 
 ## FUTURE IDEAS
 
@@ -83,13 +79,12 @@ These are some ideas or improvements that I would make in the future:
 - [ ] Create a CI/CD pipeline to automate the build and testing process, when code is pushed to the repository.
 - [ ] Create a random value vector to test the function with a custom range of values, sizes and number of times.
 - [ ] Create a variable on `CMakeLists.txt` to change the value of the function.
+
     ```bash
     cmake -S . -B build -D vector="1,2,3,4,5"
     ```
 - [ ] Instead of symlink the latest version of Google Test, use a release version or fetch the latest version with `cmake`.
 - [ ] Currently, I have to build again with `cmake --build build` so the tests can be disabled/enabled. Find if this is the intended behaviour.
-
-----
 
 ## REFERENCES
 
@@ -119,8 +114,6 @@ Some references that I used or will in the future, to learn and complete this pr
 | :--- |
 | [CMake - the essential package](https://www.youtube.com/watch?v=UH6F6ypdYbw) |
 | [Do you even test? (your code with CMake)](https://youtu.be/pxJoVRfpRPE?si=-A3eVD9pUFIryHTY) |
-
-----
 
 ## UNIT TEST CHECKLIST
 
