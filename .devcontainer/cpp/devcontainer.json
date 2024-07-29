@@ -17,6 +17,5 @@
 			]
 		}
 	},
-	"postCreateCommand": ".devcontainer/cpp/post-create.sh",
 	"remoteUser": "root"
 }
