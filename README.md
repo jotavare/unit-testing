@@ -75,14 +75,10 @@ code --list-extensions | xargs -L 1 echo code --install-extension
 
 These are some ideas or improvements that I would make in the future:
 
-- [ ] Create a flow diagram of the project and the unit tests.
+- [ ] Design a flow diagram of the project and the unit tests.
 - [ ] Create a CI/CD pipeline to automate the build and testing process, when code is pushed to the repository.
-- [ ] Create a random value vector to test the function with a custom range of values, sizes and number of times.
-- [ ] Create a variable on `CMakeLists.txt` to change the value of the function.
-
-    ```bash
-    cmake -S . -B build -D vector="1,2,3,4,5"
-    ```
+- [ ] Create a random value vector function, to test the code with a custom range of values, sizes and number of times.
+- [ ] Use a variable directly while building the project. `cmake -S . -B build -Dvector="1,2,3,4,5"`
 - [ ] Instead of symlink the latest version of Google Test, use a release version or fetch the latest version with `cmake`.
 - [ ] Currently, I have to build again with `cmake --build build` so the tests can be disabled/enabled. Find if this is the intended behaviour.
 
