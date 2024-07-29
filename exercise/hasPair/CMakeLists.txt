@@ -2,11 +2,11 @@
 if(BUILD_TESTING)
     # create an executable for the test
     add_executable(hasPairTest hasPairTest.cpp)
-    
+
     # link the test executable with the googletest library and any other necessary libraries
     target_link_libraries(hasPairTest PRIVATE GTest::gtest_main cxx_setup)
-    
-    # include googletest helper function
+
+    # include googletest module
     include(GoogleTest)
 
     # option to enable or disable individual tests
@@ -19,21 +19,21 @@ if(BUILD_TESTING)
 
     # add test conditions
     if(ENABLE_TEST_PAIR_EXISTS)
-        add_test(NAME HasPairTest_PairExists COMMAND hasPairTest --gtest_filter=HasPairTest.PairExists)
+        add_test(NAME PairExists COMMAND HasPairTest --gtest_filter=HasPairTest.PairExists)
     endif()
     if(ENABLE_TEST_PAIR_DOES_NOT_EXIST)
-        add_test(NAME HasPairTest_PairDoesNotExist COMMAND hasPairTest --gtest_filter=HasPairTest.PairDoesNotExist)
+        add_test(NAME PairDoesNotExist COMMAND hasPairTest --gtest_filter=HasPairTest.PairDoesNotExist)
     endif()
     if(ENABLE_TEST_NEGATIVE_NUMBERS)
-        add_test(NAME HasPairTest_NegativeNumbers COMMAND hasPairTest --gtest_filter=HasPairTest.NegativeNumbers)
+        add_test(NAME NegativeNumbers COMMAND hasPairTest --gtest_filter=HasPairTest.NegativeNumbers)
     endif()
     if(ENABLE_TEST_EMPTY_VECTOR)
-        add_test(NAME HasPairTest_EmptyVector COMMAND hasPairTest --gtest_filter=HasPairTest.EmptyVector)
+        add_test(NAME EmptyVector COMMAND hasPairTest --gtest_filter=HasPairTest.EmptyVector)
     endif()
     if(ENABLE_TEST_SINGLE_ELEMENT)
-        add_test(NAME HasPairTest_SingleElement COMMAND hasPairTest --gtest_filter=HasPairTest.SingleElement)
+        add_test(NAME SingleElement COMMAND hasPairTest --gtest_filter=HasPairTest.SingleElement)
     endif()
     if(ENABLE_TEST_ORIGINAL_TEST)
-        add_test(NAME HasPairTest_OriginalTest COMMAND hasPairTest --gtest_filter=HasPairTest.OriginalTest)
+        add_test(NAME OriginalTest COMMAND hasPairTest --gtest_filter=HasPairTest.OriginalTest)
     endif()
 endif()
