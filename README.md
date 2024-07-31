@@ -7,7 +7,7 @@ This project involves creating and testing a function called `hasPair()` using m
 - [X] [Introduction to unit testing.](https://livebook.manning.com/book/the-art-of-unit-testing-third-edition)
 - [X] Implement the function `hasPair()`.
 - [X] Use Google Test, for unit testing the code.
-- [X] Remember to comment the code where necessary.
+- [X] Remember to comment on the code where necessary.
 - [X] Publish the code on GitHub and send the link.
 - [X] **Bonus**: Set up the project with `CMake`.
 
@@ -87,7 +87,7 @@ These are some ideas or improvements that I would make in the future:
 
 ## REFERENCES
 
-Some references that I used or will in the future, to learn and complete this project. Some of them are based on the book `The Art of Unit Testing`.
+Some references that I used or will in the future, to learn and complete this project. Some are based on the book `The Art of Unit Testing`.
 
 | Book | Author |
 | :--- | :----- |
@@ -117,11 +117,11 @@ Some references that I used or will in the future, to learn and complete this pr
 
 ## UNIT TEST CHECKLIST
 
-This section includes some checklists and questions from the book `The Art of Unit Testing`, that I found useful to keep in mind when writing unit tests.
+This section includes some checklists and questions from the book `The Art of Unit Testing`, which I found useful to remember when writing unit tests.
 
 ### UNIT TEST PROPERTIES
 
-A good unit test should exhibit the following properties:
+> A good unit test should exhibit the following properties:
 
 - [ ] It should be easy to understand the intent of the test author.
 - [ ] It should be easy to read and write.
@@ -133,7 +133,7 @@ A good unit test should exhibit the following properties:
 
 ### UNIT TEST QUESTIONS
 
-Ask yourself the following questions about the tests you’ve written and executed up to now:
+> Ask yourself the following questions about the tests you’ve written and executed up to now:
 
 - [ ] Can I run and get results from a test I wrote two weeks, months or years ago?
 - [ ] Can any member of my team run and get results from tests I wrote two months ago?
@@ -147,7 +147,7 @@ Ask yourself the following questions about the tests you’ve written and execut
 
 ### UNIT TEST QUALITIES
 
-A good unit test has these qualities:
+> A good unit test has these qualities:
 
 - [ ] It should run quickly.
 - [ ] It should have full control of the code under test.
