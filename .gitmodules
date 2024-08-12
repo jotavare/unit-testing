@@ -3,4 +3,4 @@
 	url = https://github.com/royosherove/aout3-samples
 [submodule "exercise/googletest"]
 	path = exercise/googletest
-	url = https://github.com/google/googletest
+	url = https://github.com/google/googletest.git
