@@ -1,3 +1,17 @@
+<div align="center">
+
+![Top Language](https://img.shields.io/github/languages/top/jotavare/unit-testing?color=00599C)
+![License](https://img.shields.io/github/license/jotavare/unit-testing?color=blue)
+![Last Commit](https://img.shields.io/github/last-commit/jotavare/unit-testing?color=success)
+
+</div>
+
+<div align="center">
+
+[ABOUT](#about) • [PROJECT CHECKLIST](#project-checklist) • [PROJECT STRUCTURE](#project-structure) • [COMMANDS](#commands) • [FUTURE IDEAS](#future-ideas) • [REFERENCES](#references) • [UNIT TEST CHECKLIST](#unit-test-checklist) • [CONTRIBUTING](#contributing) • [LICENSE](#license)
+
+</div>
+
 ## ABOUT
 
 This project involves creating and testing a function called `hasPair()` using modern `C++` practices. It required learning `CMake`, and using `GoogleTest` for unit testing. The project setup utilizes a devcontainer for `C++`, and `Node.js` for chapter exercises from `The Art of Unit Testing` (`aout3-samples/`).
@@ -28,7 +42,7 @@ The current folder structure of the project and explanation of each folder and f
 ├── cmake-tutorial/             # small tutorial i did to learn cmake
 ├── exercise/
 │   ├── cmake/                  # includes a cmake update submodules file
-│   ├── example/                # cmake example i did to learn cmake and a makefile example
+│   ├── example/                # cmake example i did to learn cmake
 │   ├── googletest/             # source code of googletest
 │   ├── hasPair/                # the main exercise, hasPair function and tests
 │   └── CMakeLists.txt          # main cmake configuration file
@@ -153,4 +167,12 @@ This section includes some checklists and questions from the book `The Art of Un
 - [ ] It should have full control of the code under test.
 - [ ] It should be fully isolated (it should run independently of other tests).
 - [ ] It should run in memory without requiring filesystem files, networks, or databases.
+
+## CONTRIBUTING
+
+This is a personal, finished learning project and is not open to external contributions. Issues and pull requests are disabled.
+
+## LICENSE
+
+This project is available under the MIT License. For further details, please refer to the [LICENSE](https://github.com/jotavare/unit-testing/blob/main/LICENSE) file.
 - [ ] It should be as synchronous and linear as possible (no parallel threads).

@@ -19,7 +19,7 @@ if(BUILD_TESTING)
 
     # add test conditions
     if(ENABLE_TEST_PAIR_EXISTS)
-        add_test(NAME PairExists COMMAND HasPairTest --gtest_filter=HasPairTest.PairExists)
+        add_test(NAME PairExists COMMAND hasPairTest --gtest_filter=HasPairTest.PairExists)
     endif()
     if(ENABLE_TEST_PAIR_DOES_NOT_EXIST)
         add_test(NAME PairDoesNotExist COMMAND hasPairTest --gtest_filter=HasPairTest.PairDoesNotExist)
