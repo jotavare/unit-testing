@@ -170,7 +170,7 @@ This section includes some checklists and questions from the book `The Art of Un
 
 ## CONTRIBUTING
 
-This is a personal, finished learning project and is not open to external contributions. Issues and pull requests are disabled.
+This repository is finished and not open to changes.
 
 ## LICENSE
 
