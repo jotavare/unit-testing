@@ -1,16 +1,21 @@
-<div align="center">
+<p align="center">
+	<img src="https://img.shields.io/badge/status-finished-success?color=%2312bab9&style=flat-square"/>
+	<img src="https://img.shields.io/github/languages/top/jotavare/unit-testing?color=%2312bab9&style=flat-square"/>
+	<img src="https://img.shields.io/github/last-commit/jotavare/unit-testing?color=%2312bab9&style=flat-square"/>
+	<a href='https://www.linkedin.com/in/jotavare' target="_blank"><img alt='Linkedin' src='https://img.shields.io/badge/LinkedIn-blue?style=flat-square'/></a>
+</p>
 
-![Top Language](https://img.shields.io/github/languages/top/jotavare/unit-testing?color=00599C)
-![License](https://img.shields.io/github/license/jotavare/unit-testing?color=blue)
-![Last Commit](https://img.shields.io/github/last-commit/jotavare/unit-testing?color=success)
-
-</div>
-
-<div align="center">
-
-[ABOUT](#about) • [PROJECT CHECKLIST](#project-checklist) • [PROJECT STRUCTURE](#project-structure) • [COMMANDS](#commands) • [FUTURE IDEAS](#future-ideas) • [REFERENCES](#references) • [UNIT TEST CHECKLIST](#unit-test-checklist) • [CONTRIBUTING](#contributing) • [LICENSE](#license)
-
-</div>
+<p align="center">
+	<a href="#about">About</a> •
+	<a href="#project-checklist">Project checklist</a> •
+	<a href="#project-structure">Project structure</a> •
+	<a href="#commands">Commands</a> •
+	<a href="#future-ideas">Future ideas</a> •
+	<a href="#references">References</a> •
+	<a href="#unit-test-checklist">Unit test checklist</a> •
+	<a href="#contributing">Contributing</a> •
+	<a href="#license">License</a>
+</p>
 
 ## ABOUT
 
