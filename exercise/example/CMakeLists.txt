@@ -15,7 +15,7 @@ message(STATUS "Value of FOO: ${FOO}")
 # set(FOO "foo" CACHE STRING "Description" FORCE)
 # message(STATUS "Forced value of FOO: ${FOO}")
 
-# # still saves on the cache but wont show on the configuration
+# # still saves on the cache but won't show on the configuration
 # set(FOO "foo" CACHE INTERNAL "Description" FORCE)
 # message(STATUS "Internal value of FOO: ${FOO}")
 
