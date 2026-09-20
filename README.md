@@ -1,22 +1,3 @@
-<p align="center">
-	<img src="https://img.shields.io/badge/status-finished-success?color=%2312bab9&style=flat-square"/>
-	<img src="https://img.shields.io/github/languages/top/jotavare/unit-testing?color=%2312bab9&style=flat-square"/>
-	<img src="https://img.shields.io/github/last-commit/jotavare/unit-testing?color=%2312bab9&style=flat-square"/>
-	<a href='https://www.linkedin.com/in/jotavare' target="_blank"><img alt='Linkedin' src='https://img.shields.io/badge/LinkedIn-blue?style=flat-square'/></a>
-</p>
-
-<p align="center">
-	<a href="#about">About</a> •
-	<a href="#project-checklist">Project checklist</a> •
-	<a href="#project-structure">Project structure</a> •
-	<a href="#commands">Commands</a> •
-	<a href="#future-ideas">Future ideas</a> •
-	<a href="#references">References</a> •
-	<a href="#unit-test-checklist">Unit test checklist</a> •
-	<a href="#contributing">Contributing</a> •
-	<a href="#license">License</a>
-</p>
-
 ## ABOUT
 
 This project involves creating and testing a function called `hasPair()` using modern `C++` practices. It required learning `CMake`, and using `GoogleTest` for unit testing. The project setup utilizes a devcontainer for `C++`, and `Node.js` for chapter exercises from `The Art of Unit Testing` (`aout3-samples/`).
@@ -172,12 +153,3 @@ This section includes some checklists and questions from the book `The Art of Un
 - [ ] It should have full control of the code under test.
 - [ ] It should be fully isolated (it should run independently of other tests).
 - [ ] It should run in memory without requiring filesystem files, networks, or databases.
-
-## CONTRIBUTING
-
-This repository is finished and not open to changes.
-
-## LICENSE
-
-This project is available under the MIT License. For further details, please refer to the [LICENSE](https://github.com/jotavare/unit-testing/blob/main/LICENSE) file.
-- [ ] It should be as synchronous and linear as possible (no parallel threads).
